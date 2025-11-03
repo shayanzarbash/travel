@@ -1,0 +1,36 @@
+export default Object.freeze({
+  chips: [
+    'حمام',
+    'تلویزیون',
+    'قفل درب اتاق کارتی',
+    'تلفن در اتاق ',
+    'سونا',
+    'فکس',
+    'دمپایی',
+    'لوازم بهداشتی ',
+    'دمپایی',
+    'میزتحریر ',
+    'امکان شارژ وسایل الکترونیکی',
+  ],
+
+  entrance_hour: 'از ۱۴ تا ۲۰',
+  leaving_hour: 'از ۱۲ تا ۱۴',
+  documents: 'ارائه "کارت ملی هوشمند و مدارک محرمیت" الزامی است.',
+  other_terms:
+    'استعمال دخانیات فقط بیرون از اقامتگاه مجاز است. در صورت عدم رعایت نظافت مبلغ 500 هزار تومان از مهمانان گرامی دریافت میشود. کودکان بالای 5 سال جزو نفرات محاسبه شده و از آن‌ها هزینه‌ی کامل دریافت می‌شود. (تا یک کودک مانعی ندارد)',
+  images: [
+    '/static/images/mock/room-1-large.jpeg',
+    '/static/images/mock/room-1-large.jpeg',
+    '/static/images/mock/room-1-large.jpeg',
+    '/static/images/mock/room-1-large.jpeg',
+    '/static/images/mock/room-1-large.jpeg',
+    '/static/images/mock/room-1-large.jpeg',
+    '/static/images/mock/room-1-large.jpeg',
+    '/static/images/mock/room-1-large.jpeg',
+    '/static/images/mock/room-1-large.jpeg',
+    '/static/images/mock/room-1-large.jpeg',
+    '/static/images/mock/room-1-large.jpeg',
+    '/static/images/mock/room-1-large.jpeg',
+    '/static/images/mock/room-1-large.jpeg',
+  ],
+});

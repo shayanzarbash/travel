@@ -1,0 +1,9 @@
+{
+  "extends": "next",
+  "overrides": [
+    {
+      "files": ["*.customExt"],
+      "parser": "parserName"
+    }
+  ]
+}
