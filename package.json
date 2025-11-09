@@ -1,5 +1,5 @@
 {
-  "name": "setareyek-travelnest",
+  "name": "navaco-portal",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,6 @@
     "lint": "npm  run check-types && eslint . --no-ignore",
     "lint:fix": "npm run lint -- --fix",
     "prettier": "prettier --write */**/*.{js,jsx,json,ts,tsx,scss,css,md}",
-    "prepare": "husky install"
   },
   "dependencies": {
     "next": "14.2.5",
@@ -49,7 +48,6 @@
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-unused-imports": "^4.0.1",
     "globals": "^15.8.0",
-    "husky": "^7.0.4",
     "jalali-moment": "^3.3.11",
     "lint-staged": "^15.2.7",
     "next-intl": "^3.17.2",

@@ -1,3 +1,5 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { createElement, FC, FunctionComponent, useRef, useState } from 'react';
@@ -36,7 +38,7 @@ const NavItem: FC<TNavItem> = ({ title, children, sub_menu }) => {
 
   return (
     <div
-      className='b1_bold relative flex cursor-pointer items-center gap-2 text-text-primary'
+      className='b1_bold relative flex cursor-pointer items-center gap-2 text-text-static'
       ref={wrapperRef}
       onClick={() => sub_menu && onToggleIsShow((prevState) => !prevState)}
     >
