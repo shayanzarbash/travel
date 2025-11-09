@@ -25,6 +25,7 @@ const config: Config = {
         1: 'var(--color-background-1)',
         2: 'var(--color-background-2)',
         3: 'var(--color-background-3)',
+        4: 'radial-gradient(#e66465, #9198e5);',
       },
       text: {
         static: 'var(--color-text-static)',
@@ -72,17 +73,17 @@ const config: Config = {
           },
         ],
         h1_bold: [
-          '72px',
+          '50px',
           {
-            lineHeight: '112px',
-            fontWeight: '700',
+            lineHeight: '72px',
+            fontWeight: '500',
           },
         ],
         h2_black: [
-          '36px',
+          '44px',
           {
             lineHeight: '56px',
-            fontWeight: '900',
+            fontWeight: '700',
           },
         ],
         h2_bold: [
@@ -114,10 +115,10 @@ const config: Config = {
           },
         ],
         t1_light: [
-          '24px',
+          '20px',
           {
-            lineHeight: '36px',
-            fontWeight: '300',
+            lineHeight: '40px',
+            fontWeight: '700',
           },
         ],
         t2_bold: [
@@ -135,10 +136,10 @@ const config: Config = {
           },
         ],
         t2_light: [
-          '18px',
+          '20px',
           {
-            lineHeight: '28px',
-            fontWeight: '300',
+            lineHeight: '40px',
+            fontWeight: '400',
           },
         ],
         b1_bold: [
@@ -159,7 +160,7 @@ const config: Config = {
           '16px',
           {
             lineHeight: '26px',
-            fontWeight: '300',
+            fontWeight: '500',
           },
         ],
         b2_bold: [
@@ -220,10 +221,10 @@ const config: Config = {
           },
         ],
         h2_black_md: [
-          '28px',
+          '44px',
           {
-            lineHeight: '44px',
-            fontWeight: '900',
+            lineHeight: '64px',
+            fontWeight: '700',
           },
         ],
         h2_bold_md: [
@@ -257,8 +258,8 @@ const config: Config = {
         t1_light_md: [
           '20px',
           {
-            lineHeight: '32px',
-            fontWeight: '300',
+            lineHeight: '40px',
+            fontWeight: '400',
           },
         ],
         t2_bold_md: [
@@ -361,10 +362,10 @@ const config: Config = {
           },
         ],
         h2_black_sm: [
-          '24px',
+          '44px',
           {
-            lineHeight: '36px',
-            fontWeight: '900',
+            lineHeight: '64px',
+            fontWeight: '700',
           },
         ],
         h2_bold_sm: [
@@ -532,7 +533,7 @@ const config: Config = {
         out: 'out 0.3s',
       },
       backgroundImage: {
-        hero_pattern: "url('../../public/static/images/home/banner.jpg')",
+        hero_pattern: "url('../../public/static/images/home/light2.png')",
         button_primary:
           'linear-gradient(93deg, #F66B38 -0.65%, #FF9000 104.32%, #FF9000 104.32%)',
         button_disable_primary:
@@ -541,6 +542,8 @@ const config: Config = {
           'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 50%, rgba(0, 0, 0, 0.60) 100%)',
         image_card_2:
           'linear-gradient(0deg, rgba(0, 0, 0, 0.40)0%, rgba(0, 0, 0, 0.40)100%)',
+        image_card_3:
+          'linear-gradient(135deg,   rgba(173, 188, 246, 60) 0%,  rgba(110, 191, 244, 16) 77.08%,   rgba(70, 144, 213, 6) 100%)',
       },
       borderRadius: {
         '4xl': '2rem',

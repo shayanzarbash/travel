@@ -20,6 +20,7 @@ interface IInput extends React.InputHTMLAttributes<HTMLInputElement> {
   id?: string;
   defaultValue?: string | number;
   register?: ReturnType<typeof useForm>['register'];
+  placeholder?: string
 }
 
 const Input: FC<IInput> = forwardRef<HTMLInputElement, IInput>(
@@ -31,6 +32,7 @@ const Input: FC<IInput> = forwardRef<HTMLInputElement, IInput>(
       onChange,
       className = '',
       maxlengthNumber = 11,
+      placeholder,
       ...props
     },
     ref,
@@ -66,17 +68,8 @@ const Input: FC<IInput> = forwardRef<HTMLInputElement, IInput>(
           dir={inputType === 'rtl' ? 'rtl' : 'ltr'}
           ref={ref}
           {...props}
+          placeholder={placeholder}
         />
-        <label
-          className={cn(
-            'bg-white c1_regular pointer-events-none absolute right-2 px-1 text-text-primary transition-all duration-200 ease-in-out',
-            (isFocused ?? value ?? props.placeholder)
-              ? '-top-2 right-4 bg-background-2 text-xs text-stroke-tertiary'
-              : 'top-3 text-sm',
-          )}
-        >
-          {label}
-        </label>
       </div>
     );
   },

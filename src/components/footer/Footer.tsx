@@ -1,185 +1,153 @@
-import { useTranslations } from 'next-intl';
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
-import { FC } from 'react';
 
-import Icon from '@/ui-kit/icon/Icon';
-import { TListIcon } from '@/ui-kit/icon/Icon.types';
-
-const Footer: FC = () => {
-  const t = useTranslations('Footer');
-
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+export default function Footer() {
   return (
-    <footer className='star_container flex flex-col gap-6 bg-background-2 py-6 lg:gap-10 lg:py-10'>
-      <section className='flex flex-col justify-between gap-6 md:flex-row'>
-        <div className='flex flex-col gap-6 md:flex-row md:gap-16'>
-          {links.map((linkItem, index) => (
-            <div key={index}>
-              <Icon name='dots' classes='text-[4px]' />
-              <div className='mt-4 flex flex-col gap-4 md:mt-6 md:gap-6 lg:mt-8'>
-                {linkItem.map((linkSubItem) => (
-                  <Link
-                    key={linkSubItem.title}
-                    className='b1_bold text-text-primary'
-                    href={linkSubItem.title}
-                    title={t(linkSubItem.title)}
-                  >
-                    {t(linkSubItem.title)}
-                  </Link>
-                ))}
+    <footer className="text-white relative bg-[linear-gradient(180deg,rgba(11,23,46,1)_0%,rgba(10,22,44,1)_40%,rgba(8,18,37,1)_100%)] px-6 py-12 before:absolute before:bottom-0 before:left-0 before:h-[120px] before:w-full before:bg-[url('/static/images/home/footer2.png')] before:bg-contain before:bg-bottom before:bg-no-repeat before:content-[''] md:px-12">
+      {/* top section */}
+      <div className='star_container'>
+        <div className='flex gap-10 md:grid-cols-3'>
+          <div className='flex max-w-[10%] basis-[10%] flex-col items-center gap-4 md:items-start'>
+            <h5 className='mb-4 font-bold text-stroke-static'>اطلاع‌رسانی</h5>
+            <Link className='b1_regular text-stroke-static' href='###'>
+              اخبار ناواکو
+            </Link>
+            <Link className='b1_regular text-stroke-static' href='###'>
+              مقالات
+            </Link>
+            <Link className='b1_regular text-stroke-static' href='###'>
+              مقالات
+            </Link>
+          </div>
+
+          <div className='flex flex-1 flex-col items-center gap-4 md:items-start'>
+            <h5 className='mb-4 font-bold text-stroke-static'>دسترسی سریع</h5>
+            <Link className='b1_regular text-stroke-static' href='###'>
+              بانک مسکن
+            </Link>
+            <Link className='b1_regular text-stroke-static' href='###'>
+              گروه مالی بانک مسکن
+            </Link>
+            <Link className='b1_regular text-stroke-static' href='###'>
+              آکادمی آموزشی
+            </Link>
+          </div>
+
+          <div className='flex flex-col items-center gap-2 md:items-start'>
+            <h5 className='mb-4 font-bold text-stroke-static'>شبکه اجتماعی</h5>
+            <p className='text-sm text-stroke-static'>
+              ما را در شبکه های اجتماعی دنبال کنید
+            </p>
+
+            <div className='mt-4 flex gap-4'>
+              {/* place icons */}
+              <div className='align-center flex h-[56px] w-[56px] justify-center rounded-2xl bg-text-secondary'>
+                <Link href='###' className='align-center flex'>
+                  <Image
+                    src='/static/images/home/ins.svg'
+                    alt='سامانش'
+                    width={24}
+                    height={24}
+                    className='text-white transition-transform group-hover:scale-110'
+                  />
+                </Link>
+              </div>
+              <div className='align-center flex h-[56px] w-[56px] justify-center rounded-2xl bg-text-secondary'>
+                <Link href='###' className='align-center flex'>
+                  <Image
+                    src='/static/images/home/twit.svg'
+                    alt='سامانش'
+                    width={24}
+                    height={24}
+                    className='text-white transition-transform group-hover:scale-110'
+                  />
+                </Link>
+              </div>
+              <div className='align-center flex h-[56px] w-[56px] justify-center rounded-2xl bg-text-secondary'>
+                <Link href='###' className='align-center flex'>
+                  <Image
+                    src='/static/images/home/linke.svg'
+                    alt='سامانش'
+                    width={24}
+                    height={24}
+                    className='text-white transition-transform group-hover:scale-110'
+                  />
+                </Link>
               </div>
             </div>
-          ))}
-        </div>
-        <div className='flex flex-col'>
-          <h6 className='b2_bold text-center text-text-primary md:text-right'>
-            {t('follow_we_on_social')}
-          </h6>
-          <div className='mb-3 mt-4 flex items-center justify-evenly gap-12 border-b border-stroke-primary pb-3 md:mb-4 md:pb-4 lg:mb-6 lg:mt-3 lg:justify-start lg:pb-6 [&>a:first-child>.breaker]:hidden'>
-            {socialList.map((socialListItem) => (
-              <a
-                key={socialListItem.icon}
-                className='relative flex items-center'
-                title={t(socialListItem.title)}
-                href=''
-              >
-                <div className='breaker absolute -right-6 top-1/2 my-0.5 h-[calc(100%-2px)] w-[1px] -translate-y-1/2 transform rounded-full bg-stroke-primary' />
-
-                <Icon
-                  name={socialListItem.icon as TListIcon}
-                  classes='text-stroke-secondary text-2xl'
-                />
-              </a>
-            ))}
           </div>
-          <h6 className='b2_bold mb-2 text-center text-text-primary md:text-start'>
-            {t('telephone_support')}
-          </h6>
-          <h6 className='b2_bold text-center text-text-primary md:text-start'>
-            {t('address')}
-          </h6>
         </div>
-      </section>
-      <section className='flex flex-col rounded-2xl bg-background-1 p-4 lg:gap-8 lg:rounded-3xl lg:p-8'>
-        <div className='flex flex-col justify-between gap-4 lg:flex-row lg:gap-16'>
-          <div className='flex flex-col gap-2 lg:gap-4'>
-            <h5 className='t1_bold text-text-primary'>{t('setare_aval')}</h5>
-            <p className='b2_regular text-justify text-text-primary'>
-              {t('setare_aval_desc')}
+
+        <div className='my-10 border-b border-background-3 opacity-20' />
+
+        {/* contact + address */}
+        <div className='flex flex-col items-center justify-between gap-6 md:flex-row'>
+          <div className='flex-1'>
+            <p className='t2_regular text-right text-stroke-static'>
+              آدرس: تهران، سعادت آباد، میدان کاج، سرو شرقی، نبش علامه، پلاک ۵
             </p>
           </div>
-          <div className='mx-auto mb-2 flex w-full items-center justify-center rounded-lg bg-background-2 py-3 lg:mb-0 lg:contents lg:w-fit lg:justify-end lg:rounded-xl lg:bg-transparent lg:py-0'>
-            <Image
-              src='/static/images/footer/logo.svg'
-              alt={t('setare_aval_logo')}
-              width={140}
-              height={140}
-              className='h-[80px] w-[80px] lg:h-[140px] lg:w-[140px]'
-            />
-          </div>
-        </div>
-        <div className='grid grid-cols-2 gap-2 lg:grid-cols-4 lg:gap-5'>
-          {products.map((productItem) => (
-            <div
-              key={productItem.title}
-              className='flex items-center justify-center rounded-lg bg-background-2 py-3 lg:rounded-xl'
-            >
+
+          <div className='flex items-center gap-4 pl-12'>
+            <div className=''>
               <Image
-                src={productItem.image}
-                width={productItem.width}
-                height={productItem.height}
-                alt={t(productItem.title)}
+                src='/static/images/home/call-calling2.svg'
+                alt='ناواکو'
+                width={32}
+                height={32}
               />
             </div>
-          ))}
+
+            <span className='t2_regular text-stroke-static'>
+              021 - 423396000
+            </span>
+          </div>
+          <div className='flex items-center gap-4'>
+            <Image
+              src='/static/images/home/sms.svg'
+              alt='ناواکو'
+              width={32}
+              height={32}
+            />
+
+            <span className='t2_regular text-stroke-static'>
+              Info@navaco.com
+            </span>
+          </div>
         </div>
-      </section>
-      <h6 className='c1_regular text-center text-text-secondary'>
-        {t('copy_wright')}
-      </h6>
+
+        <div className='flex items-center justify-between pt-16'>
+          <div className='z-10 flex flex-col items-start'>
+            <p className='b1_regular mt-6 text-center text-stroke-static'>
+              طراحی و توسعه ناواکو، ایران سال 1403
+            </p>
+            <p className='b1_regular mt-2 text-center text-stroke-static'>
+              © تمامی حقوق محفوظ و متعلق به شرکت ناواکو است.
+            </p>
+          </div>
+          <div className='flex items-center gap-4'>
+            <a href='https://samanesh.ir' target='_blank' rel='noopener'>
+              <Image
+                src='/static/images/home/neshan.png'
+                alt='سامانش'
+                width={69}
+                height={92}
+              />
+            </a>
+            <a href='https://navaco.ir' target='_blank' rel='noopener'>
+              <Image
+                src='/static/images/home/ozv.png'
+                alt='ناواکو'
+                width={67}
+                height={98}
+              />
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
   );
-};
-
-export default Footer;
-
-const links = [
-  [
-    {
-      title: 'travel_nest_mashhad',
-      link: '',
-    },
-    {
-      title: 'travel_nest_kish',
-      link: '',
-    },
-    {
-      title: 'travel_nest_ramsar',
-      link: '',
-    },
-  ],
-  [
-    {
-      title: 'account',
-      link: '',
-    },
-    {
-      title: 'requests',
-      link: '',
-    },
-  ],
-];
-
-const socialList = [
-  {
-    icon: 'instagram',
-    link: '',
-    title: 'instagram',
-  },
-  {
-    icon: 'envelope',
-    link: '',
-    title: 'email',
-  },
-  {
-    icon: 'aparat',
-    link: '',
-    title: 'aparat',
-  },
-  {
-    icon: 'linkdin',
-    link: '',
-    title: 'linkdin',
-  },
-];
-
-const products = [
-  {
-    image: '/static/images/footer/stare_yek.svg',
-    title: 'stare_yek',
-    link: '',
-    width: 76,
-    height: 18,
-  },
-  {
-    image: '/static/images/footer/ussd.svg',
-    title: 'ussd',
-    link: '',
-    width: 54,
-    height: 36,
-  },
-  {
-    image: '/static/images/footer/rondtarin.svg',
-    title: 'rondtarin',
-    link: '',
-    width: 62,
-    height: 24,
-  },
-  {
-    image: '/static/images/footer/setare_100.svg',
-    title: 'setare_100',
-    link: '',
-    width: 74,
-    height: 36,
-  },
-];
+}

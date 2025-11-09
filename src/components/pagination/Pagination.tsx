@@ -34,9 +34,9 @@ const Pagination: FC<TPropsPagination> = ({
       <button
         onClick={handlePrevious}
         disabled={currentPage === 1}
-        className='mx-1 h-[40px] w-[40px] rounded-lg border border-stroke-primary pt-1.5'
+        className='mx-1 h-[40px] w-[40px] rounded-lg pt-1.5'
       >
-        <Icon name='arrow_left' classes='text-2xl' />
+        <Icon name='arrow_left' classes='text-5xl text-stroke-static' />
       </button>
       {Array.from({ length: totalPages }, (_, index) => (
         <button
@@ -45,7 +45,7 @@ const Pagination: FC<TPropsPagination> = ({
           className={cn(
             'mx-1 h-[40px] w-[40px] rounded-lg border border-stroke-primary pt-0.5 text-stroke-secondary',
             currentPage === index + 1
-              ? 'b2_bold border-2 border-stroke-tertiary text-stroke-tertiary'
+              ? 'b2_bold border-stroke-tertiary bg-text-static text-stroke-tertiary'
               : 'b2_regular',
           )}
         >
@@ -55,12 +55,11 @@ const Pagination: FC<TPropsPagination> = ({
       <button
         onClick={handleNext}
         disabled={currentPage === totalPages}
-        className={cn(
-          'mx-1 h-[40px] w-[40px] rounded-lg border border-stroke-primary pt-1.5',
-          { 'cursor-not-allowed': currentPage === totalPages },
-        )}
+        className={cn('mx-1 h-[40px] w-[40px]', {
+          'cursor-not-allowed': currentPage === totalPages,
+        })}
       >
-        <Icon name='arrow_right' classes='text-2xl' />
+        <Icon name='arrow_right' classes='text-5xl text-stroke-static' />
       </button>
     </div>
   );

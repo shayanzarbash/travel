@@ -1,56 +1,39 @@
 'use client';
 
-import { FC, ReactNode, useState } from 'react';
+import { useState } from 'react';
 
 import { cn } from '@/libs/utils';
 
-import Icon from '@/ui-kit/icon/Icon';
-
-interface TPropsAccordion {
-  label: string;
-  children: ReactNode;
-  initialIsOpen?: boolean;
-}
-
-const Accordion: FC<TPropsAccordion> = ({
-  label,
-  initialIsOpen = true,
-  children,
+const AccordionItem = ({
+  title,
+  content,
+}: {
+  title?: string;
+  content?: string;
 }) => {
-  const [isOpen, onToggleIsOpen] = useState(initialIsOpen);
-
-  const handleIsOpen = (): void => onToggleIsOpen((prevState) => !prevState);
+  const [open, setOpen] = useState(false);
 
   return (
-    <div>
-      <div
-        onClick={handleIsOpen}
-        className='flex cursor-pointer items-center justify-between'
+    <div className='border-b border-background-3 py-8 pr-7 last:border-b-0'>
+      <button
+        onClick={() => setOpen(!open)}
+        className='flex w-full items-center text-right'
       >
-        <h6
+        <span
           className={cn(
-            'b1_bold relative text-text-primary',
-            'after:absolute after:-left-3 after:bottom-0 after:top-0 after:my-auto after:h-1 after:w-1 after:rounded-full after:bg-stroke-orange',
+            't1_regular text-stroke-static transition-transform duration-300',
+            open && 'rotate-45',
           )}
         >
-          {label}
-        </h6>
-        <Icon
-          name='arrow_bottom'
-          classes={cn('text-2xl transition-transform', isOpen && 'rotate-180')}
-        />
-      </div>
-
-      <div
-        className={cn(
-          'transition-height h-0 opacity-0',
-          isOpen && 'opacity-1 h-full pt-2 lg:pt-4',
-        )}
-      >
-        {children}
-      </div>
+          +
+        </span>
+        <span className='pr-5 t2_regular text-stroke-static'>{title}</span>
+      </button>
+      {open && (
+        <div className='t2_regular mt-3 text-stroke-static'>{content}</div>
+      )}
     </div>
   );
 };
 
-export default Accordion;
+export default AccordionItem;

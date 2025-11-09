@@ -45,7 +45,7 @@ export default function NotFound(): JSX.Element {
         />
       </div>
       <Button
-        type='secondary'
+        type='button'
         className='mt-8 border border-stroke-secondary'
         onClick={() => router.push(localeContent.homeUrl)}
       >
