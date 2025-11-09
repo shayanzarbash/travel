@@ -1,5 +1,5 @@
 {
-  "name": "navaco-portal",
+  "name": "setareyek-travelnest",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "check-types": "tsc --noemit",
     "lint": "npm  run check-types && eslint . --no-ignore",
     "lint:fix": "npm run lint -- --fix",
-    "prettier": "prettier --write */**/*.{js,jsx,json,ts,tsx,scss,css,md}",
+    "prettier": "prettier --write */**/*.{js,jsx,json,ts,tsx,scss,css,md}"
   },
   "dependencies": {
     "next": "14.2.5",

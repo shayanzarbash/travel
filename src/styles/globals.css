@@ -124,6 +124,24 @@
         border-radius: 0 0 16px 16px;
     }
 
+    .before-bg {
+        position: relative;
+    }
+
+    .before-bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 1059px;
+        height: 730px;
+        background-image: url('../../public/static/images/home/earth-2.png');
+        background-size: cover;
+        background-position: center;
+        transform: translate(-50%, 0);
+
+    }
+
 }
 
 @layer components {

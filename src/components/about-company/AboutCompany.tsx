@@ -3,7 +3,7 @@ import Image from 'next/image';
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export default function AboutCompany() {
   return (
-    <div className='flex items-center justify-center pb-28'>
+    <div className=' flex items-center justify-center pb-28'>
       <div className='relative flex w-full flex-row-reverse items-center gap-12'>
         {/* ----- ROBOT ----- */}
         <div className='flex justify-center md:justify-end'>
