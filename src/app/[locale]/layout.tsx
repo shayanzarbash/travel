@@ -9,10 +9,11 @@ import LayoutCore from '@/components/layout/LayoutCore';
 import { configFonts } from '@/locales/config';
 
 export const metadata: Metadata = {
-  title: ' ناواکو',
-  description: 'ناواکو',
+  title: ' شرکت فناوری اطلاعات ناواکو',
+  description:
+    'درباره ما شرکت فناوری و اطلاعات ناواکو بعنوان شرکت مادر تخصصی فناوری و نوآوری بانک مسکن، یک شرکت پیشرو در زمینه فناوری و اطلاعات است که به ارائه راه‌حل‌های نوآورانه و پیشرفته برای مشتریان خود متمرکز است. تیم متخصص و با تجربه ما به طراحی، توسعه، پیاده‌سازی، نظارت، مشاوره و نگهداری در حوزه مرکز داده',
   icons: {
-    icon: "/favicon.ico",
+    icon: '/favicon.ico',
   },
 };
 
