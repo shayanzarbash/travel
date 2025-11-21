@@ -69,7 +69,7 @@ export default function OrbitalSystem() {
         behavior: 'smooth',
         block: 'start',
       });
-    }, 100);
+    }, 500);
   };
 
   return (
